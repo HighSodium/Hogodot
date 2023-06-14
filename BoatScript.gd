@@ -15,7 +15,6 @@ func _process(delta):
 	# Move boat toward player
 	var player_position = player.position
 	var velocity = self.position.direction_to(player_position) * 1
-	print(velocity)
 	
 	# Boat sprite direction
 	self.position += velocity
@@ -25,4 +24,5 @@ func _process(delta):
 		$Sprite2D.scale.x = 1
 	
 	if self.position.distance_to(player_position) < 10:
+		player.health -= 0.5
 		self.queue_free()

@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://i6b3mlcgll12" path="res://sea_bg.png" id="1"]
 [ext_resource type="Script" path="res://Camera2DScript.gd" id="2"]
-[ext_resource type="PackedScene" path="res://Player.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://Boat.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dfukljmfus2y2" path="res://Player.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b4ipgwqkc8iwc" path="res://Boat.tscn" id="4"]
 [ext_resource type="Script" path="res://TestLevelScript.gd" id="5"]
 [ext_resource type="PackedScene" path="res://ReticleNode.tscn" id="6"]
 
