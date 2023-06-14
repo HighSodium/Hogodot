@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw3xl5fktdbcv"]
+
+[ext_resource type="Script" path="res://Antny/BulletCollider.gd" id="1_a0jto"]
+[ext_resource type="Texture2D" uid="uid://cxct2dsuggpd2" path="res://Sprites/Projectiles/projectile1-frame.png" id="2_xqwc5"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_0notf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_87mnu"]
+
+[node name="Projectile_Base" type="Node2D"]
+script = ExtResource("1_a0jto")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+max_contacts_reported = 1
+contact_monitor = true
+can_sleep = false
+lock_rotation = true
+freeze = true
+freeze_mode = 1
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D"]
+texture_filter = 1
+scale = Vector2(75, 75)
+mesh = SubResource("QuadMesh_0notf")
+texture = ExtResource("2_xqwc5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_87mnu")
+
+[connection signal="body_shape_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_shape_entered"]

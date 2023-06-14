@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmj1krosnk26j"]
+
+[ext_resource type="Script" path="res://Antny/Spawner.gd" id="1_e0k78"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uv8ff"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_uvfa6"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_e0k78")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+material = SubResource("CanvasItemMaterial_uv8ff")
+scale = Vector2(20, 20)
+mesh = SubResource("QuadMesh_uvfa6")

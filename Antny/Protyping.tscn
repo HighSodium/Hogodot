@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://gb62amjwvvvq"]
+
+[ext_resource type="PackedScene" uid="uid://dmj1krosnk26j" path="res://Antny/Spawner.tscn" id="1_ytfab"]
+[ext_resource type="Script" path="res://Antny/TestPlayer.gd" id="2_w2ttm"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ofqws"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_id2p1"]
+
+[node name="Protyping" type="Node2D"]
+
+[node name="Spawner" parent="." instance=ExtResource("1_ytfab")]
+top_level = true
+position = Vector2(513, 289)
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(923, 320)
+script = ExtResource("2_w2ttm")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Player"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Player/CharacterBody2D"]
+scale = Vector2(40, 40)
+mesh = SubResource("SphereMesh_ofqws")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/CharacterBody2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_id2p1")
