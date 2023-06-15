@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cpvt6gvsctacy"]
+
+[ext_resource type="Texture2D" uid="uid://bda1g3xsrpykq" path="res://Sprites/Projectiles/projectile1.png" id="1_h0quq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1om8q"]
+texture = ExtResource("1_h0quq")
+0:0/animation_frame_0/duration = 0.1
+0:0/animation_frame_1/duration = 0.1
+0:0/animation_frame_2/duration = 0.1
+0:0/animation_frame_3/duration = 0.1
+0:0/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_1om8q")

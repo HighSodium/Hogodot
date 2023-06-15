@@ -1,7 +1,7 @@
 extends Node2D
 
 var toSpawn = preload("res://Antny/Projectile_Base.tscn")
-var spawnCooldown = 0.01
+var spawnCooldown = 0.2
 var timer = 0
 var bulletRadians = 0
 var firingPattern = PI/1.25
@@ -9,8 +9,8 @@ var firingPattern = PI/1.25
 # ---------------------------------------------------------------- #
 # Patterns are based on radians and divisions of PI
 # 
-var Patterns = {LINE=PI, TRIO=PI/1.5, STARFISH=PI/1.25, LEFTRIGHT=PI}
-var PatternSpeeds = {STILL=0, SLOWEST=0.007, SLOW=0.01, MEDIUM=0.02, FAST=0.03, FASTEST = 0.05, WILD=0.1}
+var Patterns = {LINE=0, TRIO=PI/1.5, STARFISH=PI/1.25, LEFTRIGHT=PI}
+var PatternRot = {STILL=0, SLOWEST=0.007, SLOW=0.01, MEDIUM=0.02, FAST=0.03, FASTEST = 0.05, WILD=0.1}
 # ---------------------------------------------------------------- #
 func _ready():
 	print(firingPattern)
@@ -21,8 +21,7 @@ func _process(delta):
 	#translate(Vector2(1,0))
 	timer += delta
 	
-	#TODO FIGURE OUT WHY THIS SWITCHES SIDES
-	bulletRadians += Patterns.LINE + PatternSpeeds.STILL
+	bulletRadians += Patterns.LINE + PatternRot.SLOW
 	#bulletRadians = position.distance_to(get_parent().get_node("Player").position)
 	
 	if timer >= spawnCooldown:

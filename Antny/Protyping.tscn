@@ -16,6 +16,7 @@ position = Vector2(513, 289)
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(923, 320)
 script = ExtResource("2_w2ttm")
+metadata/maxHealth = 548
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Player"]
 

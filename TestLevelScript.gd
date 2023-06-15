@@ -7,6 +7,7 @@ var boat_scene = preload("res://Boat.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pass
 #	var new_boat = boat_scene.instantiate()
 #	new_boat.position.x = -100
 #	new_boat.position.y = -100

@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dw3xl5fktdbcv"]
+[gd_scene load_steps=4 format=3 uid="uid://dw3xl5fktdbcv"]
 
 [ext_resource type="Script" path="res://Antny/BulletCollider.gd" id="1_a0jto"]
-[ext_resource type="Texture2D" uid="uid://cxct2dsuggpd2" path="res://Sprites/Projectiles/projectile1-frame.png" id="2_xqwc5"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_0notf"]
+[ext_resource type="TileSet" uid="uid://cpvt6gvsctacy" path="res://Sprites/Projectiles/projectile1.tres" id="2_0a6il"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_87mnu"]
 
@@ -18,13 +16,13 @@ lock_rotation = true
 freeze = true
 freeze_mode = 1
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D"]
-texture_filter = 1
-scale = Vector2(75, 75)
-mesh = SubResource("QuadMesh_0notf")
-texture = ExtResource("2_xqwc5")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CircleShape2D_87mnu")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-8, 8)
+tile_set = ExtResource("2_0a6il")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 0, 0)
 
 [connection signal="body_shape_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_shape_entered"]
