@@ -1,6 +1,6 @@
 extends Node2D
 
-var toSpawn = preload("res://Antny/Projectile_Base.tscn")
+var toSpawn = preload("res://Antny/Bullet_Enemy_Basic.tscn")
 var spawnCooldown = 0.2
 var timer = 0
 var bulletRadians = 0
