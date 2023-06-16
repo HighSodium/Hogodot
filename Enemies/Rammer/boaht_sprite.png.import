@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsfwx6egh0fll"
-path="res://.godot/imported/boaht_sprite.png-6d92aac3e34361ab2f287fb18ad4c626.ctex"
+path="res://.godot/imported/boaht_sprite.png-e915f0ea4cd8ee65d6cb74aca18122f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://boaht_sprite.png"
-dest_files=["res://.godot/imported/boaht_sprite.png-6d92aac3e34361ab2f287fb18ad4c626.ctex"]
+source_file="res://Enemies/Rammer/boaht_sprite.png"
+dest_files=["res://.godot/imported/boaht_sprite.png-e915f0ea4cd8ee65d6cb74aca18122f4.ctex"]
 
 [params]
 

@@ -31,9 +31,8 @@ func fireBullet(spd, vel):
 	setSpeed(spd)
 	
 func _on_rigid_body_2d_body_shape_entered(_body_rid, body, _body_shape_index, _local_shape_index):	
-	if body.get_parent().name == "Player":	
+	if body.get_parent().name.to_lower().contains == "enemy":
 		var hit = body.get_parent()
-		#print("HIT!")
 		hit.call("applyDamage", bulletDamage, self)
 		queue_free()
 		pass

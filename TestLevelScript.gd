@@ -2,7 +2,8 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
-var boat_scene = preload("res://Boat.tscn")
+
+#var boat_scene = preload("res://Enemies/enemy_Rammer.tscn")
 
 
 # Called when the node enters the scene tree for the first time.

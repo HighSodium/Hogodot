@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4ipgwqkc8iwc"]
+
+[ext_resource type="Script" path="res://Enemies/Rammer/RammerBoat.gd" id="1_52a07"]
+[ext_resource type="Texture2D" uid="uid://dsfwx6egh0fll" path="res://Enemies/Rammer/boaht_sprite.png" id="2_ac1q8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgpjt"]
+size = Vector2(91, 19)
+
+[node name="Rammer" type="CharacterBody2D"]
+script = ExtResource("1_52a07")
+enemyName = "Rammer"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ac1q8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10.5, 27.5)
+shape = SubResource("RectangleShape2D_cgpjt")

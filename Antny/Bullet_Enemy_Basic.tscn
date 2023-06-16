@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://dw3xl5fktdbcv"]
 
-[ext_resource type="Script" path="res://Antny/BulletCollider.gd" id="1_a0jto"]
-[ext_resource type="TileSet" uid="uid://cpvt6gvsctacy" path="res://Sprites/Projectiles/projectile1.tres" id="2_0a6il"]
+[ext_resource type="Script" path="res://Antny/BulletCollider.gd" id="1_bdsgf"]
+[ext_resource type="TileSet" uid="uid://cpvt6gvsctacy" path="res://Sprites/Projectiles/projectile1.tres" id="2_c20yp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_87mnu"]
 
 [node name="Projectile_Base" type="Node2D"]
-script = ExtResource("1_a0jto")
+script = ExtResource("1_bdsgf")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 max_contacts_reported = 1
@@ -21,7 +21,7 @@ shape = SubResource("CircleShape2D_87mnu")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-8, 8)
-tile_set = ExtResource("2_0a6il")
+tile_set = ExtResource("2_c20yp")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65536, 0, 0)
 

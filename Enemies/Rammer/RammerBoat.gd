@@ -1,6 +1,4 @@
-extends Node2D
-
-
+class_name Rammer extends Enemy
 # Declare member variables here. Examples:
 @onready var player = get_parent().get_node("Player")
 
@@ -11,28 +9,18 @@ func _ready():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
+	
 	# Move boat toward player
 	var player_position = player.position
-	var velocity = position.direction_to(player_position) * 1
+	var playerDir = position.direction_to(player_position) * 1
+	var collide = move_and_collide(playerDir)
+	CollisionCheck(collide)
 	
 	# Boat sprite direction
-	position += velocity
-	if velocity.x > 0:
-		$RigidBody2D.scale.x = -1
-	else:
-		$RigidBody2D.scale.x = 1
+	if velocity.x != 0:
+		$CharacterBody2D/Sprite2D.scale.x = -sign(velocity.x)
 	
 #	if self.position.distance_to(player_position) < 10:
 #		player.health -= 0.5
 #		self.queue_free()
-
-
-
-func _on_rigid_body_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if body.get_parent().name == "Player":	
-		var hit = body.get_parent()
-		print("BOAT HIT!")
-		hit.call("applyDamage", 1, self)
-		queue_free()
-		
